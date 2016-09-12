@@ -1,0 +1,70 @@
+require "json"
+require "selenium-webdriver"
+gem "test-unit"
+require "test/unit"
+
+class PostPlanSmoketestO8RubyWebdriver < Test::Unit::TestCase
+
+  def setup
+    Selenium::WebDriver::Firefox.path = "/root/firefox/firefox"
+    # profile = Selenium::WebDriver::Firefox::Profile.from_name "firefox-default"
+    # profile.secure_ssl = true
+    # profile.add_extension("/root/.mozilla/firefox/skip_cert_error-0.4.4-fx.xpi")
+    @driver = Selenium::WebDriver.for(:firefox, :profile => "firefox-default")
+    @base_url = "https://o8wlsnode1.infoplus-ot.ris:14051/HARM/controller"
+    @accept_next_alert = true
+    @driver.manage.timeouts.implicit_wait = 600
+    @verification_errors = []
+  end
+  
+  def teardown
+    @driver.quit
+    assert_equal [], @verification_errors
+  end
+  
+  def test_post_plan_smoketest_o8_ruby_webdriver
+    @driver.get(@base_url)
+    puts @driver.title
+    @driver.find_element(:name, "username").clear
+    @driver.find_element(:name, "username").send_keys "harmadmin"
+    @driver.find_element(:name, "userpassword").clear
+    @driver.find_element(:name, "userpassword").send_keys "harmadmin"
+    @driver.find_element(:css, "input[type=\"submit\"]").click
+    @driver.find_element(:link, "Processen").click
+    @driver.find_element(:link, "Voortgang processen").click
+    verify { assert_equal "Genereren actuele planning afgerond", @driver.find_element(:xpath, "//div[@id='Processen']/table/tbody/tr[2]/td[2]").text }
+  end
+  
+  def element_present?(how, what)
+    @driver.find_element(how, what)
+    true
+  rescue Selenium::WebDriver::Error::NoSuchElementError
+    false
+  end
+  
+  def alert_present?()
+    @driver.switch_to.alert
+    true
+  rescue Selenium::WebDriver::Error::NoAlertPresentError
+    false
+  end
+  
+  def verify(&blk)
+    yield
+  rescue Test::Unit::AssertionFailedError => ex
+    @verification_errors << ex
+  end
+  
+  def close_alert_and_get_its_text(how, what)
+    alert = @driver.switch_to().alert()
+    alert_text = alert.text
+    if (@accept_next_alert) then
+      alert.accept()
+    else
+      alert.dismiss()
+    end
+    alert_text
+  ensure
+    @accept_next_alert = true
+  end
+end

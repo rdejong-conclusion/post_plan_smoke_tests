@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://172.18.74.113:14001/" />
+<title>HARM BedienGebieden performance</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">HARM BedienGebieden performance</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Beheer Bediengebieden</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=form[name=&quot;form_config_list&quot;] &gt; h2</td>
+	<td>Overzicht configuraties van Eenheden en Bediengebieden</td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[text()='Nieuw']</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=button_open</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Eenheden</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>typeAndWait</td>
+	<td>id=bbg_eenheid_naam</td>
+	<td>Test</td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button_verwijder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Weet u zeker dat u eenheid 'Test' wilt verwijderen?</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Bediengebieden</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>typeAndWait</td>
+	<td>id=bbg_bediengebied_naam</td>
+	<td>anders</td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 2000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AC - Abcoude (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ADH - Achter de Hoven (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AH - Arnhem (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AHP - Velperpoort (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AHPR - Presikhaaf (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AHZ - Arnhem Zuid (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AKL - Arkel (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AKM - Akkrum (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ALM - Almere C. (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ALMB - Almere Buiten (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ALMM - Muziekwijk (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ALMO - Oostvaarders (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ALMP - Parkwijk (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AMF - Amersfoort (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AMFS - Schothorst (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AML - Almelo (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AMPO - Poort (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AMR - Alkmaar (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AMRI - Almelo de Riet (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AMRN - Alkmaar Noord (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ANA - Anna Paulowna (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=APD - Apeldoorn (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=APDM - De Maten (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=APDO - Osseveld (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=APG - Appingedam (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=APN - Alphen a/d Rijn (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ARN - Arnemuiden (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASA - Amstel (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASB - Bijlmer ArenA (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASD - Amsterdam C. (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASDL - Lelylaan (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASDM - Muiderpoort (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASDZ - Amsterdam Zuid (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASHD - Holendrecht (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASN - Assen (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASS - Sloterdijk (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ASSP - Science Park (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=ATN - Aalten (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>name=bbg_beschikbare_stations_select</td>
+	<td>label=AVAT - Vathorst (Niet gekoppeld)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=arrowLeft</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1500)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button_verwijder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Weet u zeker dat u bediengebied 'anders' wilt verwijderen?</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Beheer Bediengebieden</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[text()='Nieuw']</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button_verwijder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Weet u zeker dat u configuratie 'Nieuw' wilt verwijderen?</td>
+	<td></td>
+</tr>
+<!--bereken duur test-->
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>EindTijdTest</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['EindTijdTest']-storedVars['StartTijdTest']</td>
+	<td>TotaleTijdTest</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>============================================================================&nbsp;&nbsp;&nbsp;&nbsp;${TotaleTijdTest} ms =======================================================</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var isMoreThan10 = new Boolean(); isMoreThan10 = (${TotaleTijdTest} &lt; 1000)</td>
+	<td>isMoreThan10</td>
+</tr>
+<tr>
+	<td>verifyExpression</td>
+	<td>${isMoreThan10}</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Date().getTime()</td>
+	<td>StartTijdTest</td>
+</tr>
+</tbody></table>
+</body>
+</html>

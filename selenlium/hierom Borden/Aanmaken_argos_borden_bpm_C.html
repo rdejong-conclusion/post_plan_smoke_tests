@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="selenium.base" href="http://vos.ad.post21.nl:14001/mmi-functioneelbeheer/home.seam/" />
+<title>Aanmaken_argos_borden_bpm</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Aanmaken_argos_borden_bpmC</td></tr>
+</thead>
+<tbody>
+<tr><td>pause</td><td>800</td><td></td></tr>
+<tr> <td>clickAndWait</td> <td>name=wizard</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:displayId</td> <td>5069</td> </tr><tr> <td>select</td> <td>name=view:form:station</td> <td>value=CAS</td> </tr>
+<tr> <td>select</td> <td>name=view:form:locationType</td> <td>label=Hal</td> </tr>
+<tr> <td>type</td> <td>name=view:form:locationDescription</td> <td>BPM loadtest</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>click</td> <td>//label[text()='ARGOS, Enkelzijdig (Groot)']</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:logicalDisplayType'])[1]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:clusterIds:0:clusterId</td> <td>55069</td> </tr><tr> <td>type</td> <td>name=view:form:physicalDisplayDnsNames:0:physicalDisplayDnsName</td> <td>argos-bpm-loadtest5069.cas.ris</td> </tr>
+<tr> <td>select</td> <td>name=view:form:physicalDisplayNetworkTypes:0:physicalDisplayNetworkType</td> <td>label=Draadloos (GSM-R)</td> </tr>
+<tr> <td>type</td> <td>name=view:form:physicalDisplayNetworkIds:0:physicalDisplayNetworkId</td> <td>argos-bpm-loadtest5069.cas.ris</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:publicationSource'])[3]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:finish</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=filterType_CLUSTER_ID</td> <td></td> </tr><tr> <td>type</td> <td>id=clusterId</td> <td>55069</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=filterButton</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=operationalStatus_2</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=saveButton</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=wizard</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:displayId</td> <td>5070</td> </tr><tr> <td>select</td> <td>name=view:form:station</td> <td>value=CK</td> </tr>
+<tr> <td>select</td> <td>name=view:form:locationType</td> <td>label=Hal</td> </tr>
+<tr> <td>type</td> <td>name=view:form:locationDescription</td> <td>BPM loadtest</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>click</td> <td>//label[text()='ARGOS, Enkelzijdig (Groot)']</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:logicalDisplayType'])[1]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:clusterIds:0:clusterId</td> <td>55070</td> </tr><tr> <td>type</td> <td>name=view:form:physicalDisplayDnsNames:0:physicalDisplayDnsName</td> <td>argos-bpm-loadtest5070.ck.ris</td> </tr>
+<tr> <td>select</td> <td>name=view:form:physicalDisplayNetworkTypes:0:physicalDisplayNetworkType</td> <td>label=Draadloos (GSM-R)</td> </tr>
+<tr> <td>type</td> <td>name=view:form:physicalDisplayNetworkIds:0:physicalDisplayNetworkId</td> <td>argos-bpm-loadtest5070.ck.ris</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:publicationSource'])[3]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:finish</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=filterType_CLUSTER_ID</td> <td></td> </tr><tr> <td>type</td> <td>id=clusterId</td> <td>55070</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=filterButton</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=operationalStatus_2</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=saveButton</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=wizard</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:displayId</td> <td>5071</td> </tr><tr> <td>select</td> <td>name=view:form:station</td> <td>value=CL</td> </tr>
+<tr> <td>select</td> <td>name=view:form:locationType</td> <td>label=Hal</td> </tr>
+<tr> <td>type</td> <td>name=view:form:locationDescription</td> <td>BPM loadtest</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>click</td> <td>//label[text()='ARGOS, Enkelzijdig (Groot)']</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:logicalDisplayType'])[1]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:clusterIds:0:clusterId</td> <td>55071</td> </tr><tr> <td>type</td> <td>name=view:form:physicalDisplayDnsNames:0:physicalDisplayDnsName</td> <td>argos-bpm-loadtest5071.cl.ris</td> </tr>
+<tr> <td>select</td> <td>name=view:form:physicalDisplayNetworkTypes:0:physicalDisplayNetworkType</td> <td>label=Draadloos (GSM-R)</td> </tr>
+<tr> <td>type</td> <td>name=view:form:physicalDisplayNetworkIds:0:physicalDisplayNetworkId</td> <td>argos-bpm-loadtest5071.cl.ris</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:publicationSource'])[3]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:finish</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=filterType_CLUSTER_ID</td> <td></td> </tr><tr> <td>type</td> <td>id=clusterId</td> <td>55071</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=filterButton</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=operationalStatus_2</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=saveButton</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=wizard</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:displayId</td> <td>5072</td> </tr><tr> <td>select</td> <td>name=view:form:station</td> <td>value=CO</td> </tr>
+<tr> <td>select</td> <td>name=view:form:locationType</td> <td>label=Hal</td> </tr>
+<tr> <td>type</td> <td>name=view:form:locationDescription</td> <td>BPM loadtest</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>click</td> <td>//label[text()='ARGOS, Enkelzijdig (Groot)']</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:logicalDisplayType'])[1]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:clusterIds:0:clusterId</td> <td>55072</td> </tr><tr> <td>type</td> <td>name=view:form:physicalDisplayDnsNames:0:physicalDisplayDnsName</td> <td>argos-bpm-loadtest5072.co.ris</td> </tr>
+<tr> <td>select</td> <td>name=view:form:physicalDisplayNetworkTypes:0:physicalDisplayNetworkType</td> <td>label=Draadloos (GSM-R)</td> </tr>
+<tr> <td>type</td> <td>name=view:form:physicalDisplayNetworkIds:0:physicalDisplayNetworkId</td> <td>argos-bpm-loadtest5072.co.ris</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:publicationSource'])[3]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:finish</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=filterType_CLUSTER_ID</td> <td></td> </tr><tr> <td>type</td> <td>id=clusterId</td> <td>55072</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=filterButton</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=operationalStatus_2</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=saveButton</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=wizard</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:displayId</td> <td>5073</td> </tr><tr> <td>select</td> <td>name=view:form:station</td> <td>value=CPS</td> </tr>
+<tr> <td>select</td> <td>name=view:form:locationType</td> <td>label=Hal</td> </tr>
+<tr> <td>type</td> <td>name=view:form:locationDescription</td> <td>BPM loadtest</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>click</td> <td>//label[text()='ARGOS, Enkelzijdig (Groot)']</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:logicalDisplayType'])[1]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:clusterIds:0:clusterId</td> <td>55073</td> </tr><tr> <td>type</td> <td>name=view:form:physicalDisplayDnsNames:0:physicalDisplayDnsName</td> <td>argos-bpm-loadtest5073.cps.ris</td> </tr>
+<tr> <td>select</td> <td>name=view:form:physicalDisplayNetworkTypes:0:physicalDisplayNetworkType</td> <td>label=Draadloos (GSM-R)</td> </tr>
+<tr> <td>type</td> <td>name=view:form:physicalDisplayNetworkIds:0:physicalDisplayNetworkId</td> <td>argos-bpm-loadtest5073.cps.ris</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:publicationSource'])[3]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:finish</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=filterType_CLUSTER_ID</td> <td></td> </tr><tr> <td>type</td> <td>id=clusterId</td> <td>55073</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=filterButton</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=operationalStatus_2</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=saveButton</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=wizard</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:displayId</td> <td>5074</td> </tr><tr> <td>select</td> <td>name=view:form:station</td> <td>value=CVM</td> </tr>
+<tr> <td>select</td> <td>name=view:form:locationType</td> <td>label=Hal</td> </tr>
+<tr> <td>type</td> <td>name=view:form:locationDescription</td> <td>BPM loadtest</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>click</td> <td>//label[text()='ARGOS, Enkelzijdig (Groot)']</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:logicalDisplayType'])[1]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr><tr> <td>type</td> <td>name=view:form:clusterIds:0:clusterId</td> <td>55074</td> </tr><tr> <td>type</td> <td>name=view:form:physicalDisplayDnsNames:0:physicalDisplayDnsName</td> <td>argos-bpm-loadtest5074.cvm.ris</td> </tr>
+<tr> <td>select</td> <td>name=view:form:physicalDisplayNetworkTypes:0:physicalDisplayNetworkType</td> <td>label=Draadloos (GSM-R)</td> </tr>
+<tr> <td>type</td> <td>name=view:form:physicalDisplayNetworkIds:0:physicalDisplayNetworkId</td> <td>argos-bpm-loadtest5074.cvm.ris</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:next</td> <td></td> </tr>
+<tr> <td>click</td> <td>xpath=(//input[@name='view:form:publicationSource'])[3]</td> <td></td> </tr>
+<tr> <td>clickAndWait</td> <td>name=buttons:finish</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=filterType_CLUSTER_ID</td> <td></td> </tr><tr> <td>type</td> <td>id=clusterId</td> <td>55074</td> </tr>
+<tr> <td>clickAndWait</td> <td>name=filterButton</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=operationalStatus_2</td> <td></td> </tr>
+<tr> <td>click</td> <td>id=saveButton</td> <td></td> </tr>
+</tbody></table>
+</body>
+</html>
