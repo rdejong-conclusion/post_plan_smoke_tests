@@ -24,12 +24,14 @@ class PostPlanSmoketestO8RubyWebdriver < Test::Unit::TestCase
   def test_post_plan_smoketest_o8_ruby_webdriver
     @driver.get(@base_url)
     puts @driver.title
+    puts "Logging in"
     @driver.find_element(:name, "username").clear
     @driver.find_element(:name, "username").send_keys "harmadmin"
     @driver.find_element(:name, "userpassword").clear
     @driver.find_element(:name, "userpassword").send_keys "harmadmin"
     @driver.find_element(:css, "input[type=\"submit\"]").click
     @driver.find_element(:link, "Processen").click
+    puts "Generating plan"
     @driver.find_element(:link, "Genereren planning").click
     # Define current dd-mm-YYYY for plan generation
     current_date = DateTime.now().strftime("%d-%m-%Y")
@@ -40,8 +42,11 @@ class PostPlanSmoketestO8RubyWebdriver < Test::Unit::TestCase
     # Wait until the generation has finished
     body = @driver.find_element(:tag_name => "body").text
     assert !60.times{ break if (body.include? "Opdracht verwerkt om actuele planning te genereren voor periode #{current_date} - #{current_date}");sleep 1}
+    puts "Generation command recieved"
     assert !60.times{ break if (body.include? "Start genereren actuele planning voor #{current_date}");sleep 4}
+    puts "Generation started"
     assert !60.times{ break if (body.include? "Genereren actuele planning afgerond");sleep 4}
+    puts "Generation finished"
   end
   
   def element_present?(how, what)
