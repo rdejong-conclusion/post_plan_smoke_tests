@@ -1,4 +1,5 @@
 require "json"
+require 'date'
 require "selenium-webdriver"
 gem "test-unit"
 require "test/unit"
@@ -7,9 +8,7 @@ class PostPlanSmoketestO8RubyWebdriver < Test::Unit::TestCase
 
   def setup
     Selenium::WebDriver::Firefox.path = "/root/firefox/firefox"
-    # profile = Selenium::WebDriver::Firefox::Profile.from_name "firefox-default"
-    # profile.secure_ssl = true
-    # profile.add_extension("/root/.mozilla/firefox/skip_cert_error-0.4.4-fx.xpi")
+    @wait = Selenium::WebDriver::Wait.new(:timeout => 600)
     @driver = Selenium::WebDriver.for(:firefox, :profile => "firefox-default")
     @base_url = "https://o8wlsnode1.infoplus-ot.ris:14051/HARM/controller"
     @accept_next_alert = true
@@ -31,8 +30,16 @@ class PostPlanSmoketestO8RubyWebdriver < Test::Unit::TestCase
     @driver.find_element(:name, "userpassword").send_keys "harmadmin"
     @driver.find_element(:css, "input[type=\"submit\"]").click
     @driver.find_element(:link, "Processen").click
+    @driver.find_element(:link, "Genereren planning").click
+    # Define current dd-mm-YYYY for plan generation
+    current_date = DateTime.now().strftime("%d-%m-%Y")
+    @driver.find_element(:name, "startDate").send_keys "#{current_date}"
+    @driver.find_element(:name, "endDate").send_keys "#{current-date}"
+    @driver.find_element(:css, "input[type=\"submit\"]").click
     @driver.find_element(:link, "Voortgang processen").click
-    verify { assert_equal "Genereren actuele planning afgerond", @driver.find_element(:xpath, "//div[@id='Processen']/table/tbody/tr[2]/td[2]").text }
+    # Wait until the generation has finished
+    assert !60.times{ break if (body.include? "Genereren actuele planning gestart");sleep 4}
+    assert !60.times{ break if (body.include? "Genereren actuele planning afgerond");sleep 4}
   end
   
   def element_present?(how, what)
