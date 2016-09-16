@@ -45,7 +45,7 @@ class PostPlanSmoketestO8RubyWebdriver < Test::Unit::TestCase
     puts "Generation command recieved"
     assert !60.times{ break if (body.include? "Start genereren actuele planning voor #{current_date}");sleep 4}
     puts "Generation started"
-    assert !60.times{ break if (body.include? "Genereren actuele planning afgerond");sleep 4}
+    assert !60.times{ break if (body.include? "Genereren actuele planning afgerond");sleep 8}
     puts "Generation finished"
   end
   
