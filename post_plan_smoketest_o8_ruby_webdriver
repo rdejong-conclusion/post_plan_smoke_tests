@@ -34,7 +34,7 @@ class PostPlanSmoketestO8RubyWebdriver < Test::Unit::TestCase
     # Define current dd-mm-YYYY for plan generation
     current_date = DateTime.now().strftime("%d-%m-%Y")
     @driver.find_element(:name, "startDate").send_keys "#{current_date}"
-    @driver.find_element(:name, "endDate").send_keys "#{current-date}"
+    @driver.find_element(:name, "endDate").send_keys "#{current_date}"
     @driver.find_element(:css, "input[type=\"submit\"]").click
     @driver.find_element(:link, "Voortgang processen").click
     # Wait until the generation has finished
