@@ -15,6 +15,4 @@ ADD profiles.ini /root/.mozilla/firefox
 ADD xvfb.init /etc/init.d/xvfb
 RUN chmod +x /etc/init.d/xvfb 
 RUN update-rc.d xvfb defaults
-RUN echo 'nameserver 10.4.6.3' >> /etc/resolv.conf
-RUN echo '10.100.0.106  o8wlsnode1.infoplus-ot.ris' >> /etc/hosts
-CMD (service xvfb start; export DISPLAY=:10; ruby /root/selenium_wd_tests/post_plan_smoketest_o8_ruby_webdriver)
+CMD (service xvfb start; export DISPLAY=":10" PATH="$PATH:/root/firefox/";target_host=$target_host target_user=$target_user target_pass=$target_pass ruby /root/selenium_wd_tests/post_plan_smoketest_o8_ruby_webdriver)
