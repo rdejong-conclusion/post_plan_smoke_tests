@@ -46,7 +46,7 @@ class PostPlanSmoketestO8RubyWebdriver < Test::Unit::TestCase
     body = @driver.find_element(:tag_name => "body").text
     assert !60.times{ break if (body.include? "Opdracht verwerkt om actuele planning te genereren voor periode #{current_date} - #{current_date}");sleep 1}
     puts "Generation command recieved"
-    assert !60.times{ break if (body.include? "Start genereren actuele planning voor #{current_date}");sleep 4}
+    assert !120.times{ break if (body.include? "Start genereren actuele planning voor #{current_date}");sleep 8}
     puts "Generation started"
     assert !120.times{ break if (@driver.find_element(:tag_name => "body").text.include? "Genereren actuele planning afgerond");sleep 8}
     puts "Generation finished"
