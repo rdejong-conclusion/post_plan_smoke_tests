@@ -44,7 +44,7 @@ class PostPlanSmoketestO8RubyWebdriver < Test::Unit::TestCase
     @driver.find_element(:link, "Voortgang processen").click
     # Wait until the generation has finished
     body = @driver.find_element(:tag_name => "body").text
-    assert !60.times{ break if (body.include? "Opdracht verwerkt om actuele planning te genereren voor periode #{current_date} - #{current_date}");sleep 1}
+    assert !60.times{ break if (body.include? "Opdracht verwerkt om actuele planning te genereren voor periode #{current_date} - #{current_date}");sleep 5}
     puts "Generation command recieved"
     assert !120.times{ break if (body.include? "Start genereren actuele planning voor #{current_date}");sleep 8}
     puts "Generation started"
