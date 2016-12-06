@@ -55,7 +55,7 @@ describe "PostPlanSmoketestRubyWebdriver" do
       step = plan_step.delete!("\n")
       # Add current_date to string to swap % placeholders
       step_string = step % { :current_date => current_date }
-      puts "Checking on step #{step_string}"
+      puts "Checking on step : #{step_string}"
       expect(@driver.find_element(:tag_name => "body").text).to include("#{step_string}")
     end
   end
