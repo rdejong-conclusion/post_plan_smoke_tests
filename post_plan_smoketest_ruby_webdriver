@@ -1,30 +1,35 @@
 require "json"
 require 'date'
 require "selenium-webdriver"
-gem "test-unit"
-require "test/unit"
+require "rspec"
+require "rspec_junit_formatter"
+include RSpec::Expectations
 
-class PostPlanSmoketestRubyWebdriver < Test::Unit::TestCase
+describe "PostPlanSmoketestRubyWebdriver" do
 
-  def setup
+  before(:each) do
     Selenium::WebDriver::Firefox.path = "/root/firefox/firefox"
     $target_host = ENV["target_host"]
     $target_user = ENV["target_user"]
     $target_pass = ENV["target_pass"]
-    @wait = Selenium::WebDriver::Wait.new(:timeout => 600)
     @driver = Selenium::WebDriver.for(:firefox, :profile => "firefox-default")
     @base_url = "https://#{$target_host}:14051/HARM/controller"
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 600
     @verification_errors = []
+    RSpec.configure do |config|
+      config.expect_with :rspec do |c|
+        c.syntax = [:should, :expect]
+      end
+    end
   end
   
-  def teardown
+  after(:each) do
     @driver.quit
-    assert_equal [], @verification_errors
+    @verification_errors.should == []
   end
   
-  def test_post_plan_smoketest_ruby_webdriver
+  it "test_post_plan_smoketest_ruby_webdriver" do
     @driver.get(@base_url)
     puts @driver.title
     puts "Logging in"
@@ -38,18 +43,21 @@ class PostPlanSmoketestRubyWebdriver < Test::Unit::TestCase
     @driver.find_element(:link, "Genereren planning").click
     # Define current dd-mm-YYYY for plan generation
     current_date = DateTime.now().strftime("%d-%m-%Y")
+    # Generating plan for today
     @driver.find_element(:name, "startDate").send_keys "#{current_date}"
     @driver.find_element(:name, "endDate").send_keys "#{current_date}"
     @driver.find_element(:css, "input[type=\"submit\"]").click
+    puts "Firing off command to start generating plan"
     @driver.find_element(:link, "Voortgang processen").click
-    # Wait until the generation has finished
-    body = @driver.find_element(:tag_name => "body").text
-    assert !120.times{ break if (body.include? "Opdracht verwerkt om actuele planning te genereren voor periode #{current_date} - #{current_date}");sleep 5}
-    puts "Generation command recieved"
-    assert !120.times{ break if (body.include? "Start genereren actuele planning voor #{current_date}");sleep 16}
-    puts "Generation started"
-    assert !120.times{ break if (@driver.find_element(:tag_name => "body").text.include? "Genereren actuele planning afgerond");sleep 16}
-    puts "Generation finished"
+    # We loop over the subsequent steps we expect to appear as defined in plan_steps.lst.
+    # Waittime until fail is defined in the 'before(:each)' block
+    File.open("plan_steps.lst").each do |plan_step|
+      step = plan_step.delete!("\n")
+      # Add current_date to string to swap % placeholders
+      step_string = step % { :current_date => current_date }
+      puts "Checking on step #{step_string}"
+      expect(@driver.find_element(:tag_name => "body").text).to include("#{step_string}")
+    end
   end
   
   def element_present?(how, what)
