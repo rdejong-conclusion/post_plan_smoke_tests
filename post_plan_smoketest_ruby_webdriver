@@ -45,13 +45,13 @@ describe "PostPlanSmoketestRubyWebdriver" do
     @driver.find_element(:link, "Processen").click
     puts "Generating plan"
     @driver.find_element(:link, "Genereren planning").click
+    puts "Firing off command to start generating plan"
     # Define current dd-mm-YYYY for plan generation
     current_date = DateTime.now().strftime("%d-%m-%Y")
     # Generating plan for today
     @driver.find_element(:name, "startDate").send_keys "#{current_date}"
     @driver.find_element(:name, "endDate").send_keys "#{current_date}"
     @driver.find_element(:css, "input[type=\"submit\"]").click
-    puts "Firing off command to start generating plan"
     @driver.find_element(:link, "Voortgang processen").click
     # We loop over the subsequent steps we expect to appear as defined in plan_steps.lst.
     # Waittime until fail is defined in the 'before(:each)' block
