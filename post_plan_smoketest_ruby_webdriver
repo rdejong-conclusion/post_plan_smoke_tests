@@ -1,9 +1,10 @@
-require "json"
+require 'json'
 require 'date'
-require "selenium-webdriver"
+require 'selenium-webdriver'
 require "rspec"
 require 'rspec/retry'
-require "rspec_junit_formatter"
+require 'rspec_junit_formatter'
+require 'rspec/wait'
 include RSpec::Expectations
 
 describe "PostPlanSmoketestRubyWebdriver" do
@@ -23,7 +24,8 @@ describe "PostPlanSmoketestRubyWebdriver" do
         c.syntax = [:should, :expect]
       end
       config.verbose_retry = true
-      config.default_retry_count =5
+      config.default_retry_count = 5
+      config.wait_timeout = 300 # seconds
       config.exceptions_to_retry = [Net::ReadTimeout]
     end
   end
@@ -61,7 +63,8 @@ describe "PostPlanSmoketestRubyWebdriver" do
       step_string = step % { :current_date => current_date }
       puts "Checking on step : #{step_string}"
       @driver.find_element(:link, "Voortgang processen").click
-      expect(@driver.find_element(:tag_name => "body").text).to include("#{step_string}")
+      # expect(@driver.find_element(:tag_name => "body").text).to include("#{step_string}")
+      wait_for(@driver.find_element(:tag_name => "body").text).to include("#{step_string}")
       puts "Successfully checked step #{step_string}"
       sleep(10)
     end
