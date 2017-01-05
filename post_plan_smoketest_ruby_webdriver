@@ -63,7 +63,7 @@ describe "PostPlanSmoketestRubyWebdriver" do
       @driver.find_element(:link, "Voortgang processen").click
       expect(@driver.find_element(:tag_name => "body").text).to include("#{step_string}")
       puts "Successfully checked step #{step_string}"
-      sleep 10
+      sleep(10)
     end
   end
   
