@@ -24,10 +24,11 @@ describe "PostPlanSmoketestRubyWebdriver" do
       config.expect_with :rspec do |c|
         c.syntax = [:should, :expect]
       end
-      config.verbose_retry = true
-      config.default_retry_count = 5
-      config.wait_timeout = 600 # seconds
-      config.exceptions_to_retry = [Net::ReadTimeout]
+      config.verbose_retry = false
+      config.default_retry_count = 120
+      config.wait_timeout = 30 # seconds
+      config.wait_delay = 5
+      config.display_try_failure_messages = true
     end
   end
   
