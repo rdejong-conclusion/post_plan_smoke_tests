@@ -1,6 +1,6 @@
 FROM centos:latest
 RUN yum install -y -q epel-release
-RUN yum install -y -q xorg-x11-server-Xvfb python2-pip ruby ruby-dev ruby-rspec wget bzip2 gcc make
+RUN yum install -y -q xorg-x11-server-Xvfb python2-pip ruby ruby-devel rubygem-rspec wget bzip2 gcc make
 RUN yum install -y -q firefox-45.4.0-1.el7.centos
 RUN (yum erase -q -y firefox)
 RUN wget -q https://ftp.mozilla.org/pub/firefox/releases/45.3.0esr/linux-x86_64/en-US/firefox-45.3.0esr.tar.bz2 -O /root/firefox.tar.bz2
