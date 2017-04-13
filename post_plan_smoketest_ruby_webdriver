@@ -25,9 +25,9 @@ describe "PostPlanSmoketestRubyWebdriver" do
         c.syntax = [:should, :expect]
       end
       config.verbose_retry = false
-      config.default_retry_count = 120
-      config.wait_timeout = 30 # seconds
-      config.wait_delay = 5
+      config.default_retry_count = 2 # how many times to retry
+      config.wait_timeout = 300 # seconds
+      config.wait_delay = 30 # seconds
       config.display_try_failure_messages = true
     end
   end
