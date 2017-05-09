@@ -1,13 +1,14 @@
 FROM centos:latest
 RUN yum install -y -q epel-release
-RUN yum install -y -q xorg-x11-server-Xvfb python2-pip ruby ruby-devel rubygem-rspec wget bzip2 gcc make
-RUN yum install -y -q firefox-45.4.0-1.el7.centos
-RUN (yum erase -q -y firefox)
+RUN (yum install -y -q xorg-x11-server-Xvfb python2-pip ruby ruby-devel rubygem-rspec wget bzip2 gcc make >> /dev/null)
+RUN (yum install -y -q firefox-45.4.0-1.el7.centos >> /dev/null)
+# RUN (yum erase -q -y firefox)
 RUN wget -q https://ftp.mozilla.org/pub/firefox/releases/45.3.0esr/linux-x86_64/en-US/firefox-45.3.0esr.tar.bz2 -O /root/firefox.tar.bz2
 RUN (cd /root/;tar -jxf firefox.tar.bz2)
-RUN pip install selenium
+RUN (pip install selenium >> /dev/null)
 RUN (gem install selenium-webdriver -v 2.53.4 >> /dev/null)
-RUN (gem install rspec_junit_formatter rspec-retry rspec-wait >> /dev/null)
+RUN (gem install rspec-retry -v 0.4.6 >> /dev/null)
+RUN (gem install rspec_junit_formatter rspec-wait >> /dev/null)
 RUN mkdir -p /root/selenium_wd_tests
 RUN mkdir -p /root/.mozilla/firefox
 ADD firefox-default /root/.mozilla/firefox/firefox-default
