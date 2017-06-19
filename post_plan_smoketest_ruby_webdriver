@@ -26,7 +26,7 @@ describe "PostPlanSmoketestRubyWebdriver" do
       end
       config.verbose_retry = false
       config.default_retry_count = 2 # how many times to retry
-      config.wait_timeout = 300 # seconds
+      config.wait_timeout = 1200 # seconds
       config.wait_delay = 30 # seconds
       config.display_try_failure_messages = true
     end
@@ -60,6 +60,7 @@ describe "PostPlanSmoketestRubyWebdriver" do
     # We loop over the subsequent steps we expect to appear as defined in plan_steps.lst.
     # Waittime until fail is defined in the 'before(:each)' block
     File.open("plan_steps.lst").each do |plan_step|
+      # remove the newline as the test otherwise tries to match on it
       step = plan_step.delete!("\n")
       # Add current_date to string to swap % placeholders (see plan_steps.lst)
       step_string = step % { :current_date => current_date }
